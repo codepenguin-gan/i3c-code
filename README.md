@@ -40,7 +40,6 @@ SoulSupport is a web application designed to empower teenagers facing mental hea
 * [![HTML5][HTML5]][HTML-url]
 * [![CSS3][CSS3]][CSS-url]
 * [![JavaScript][JavaScript]][JavaScript-url]
-* [![JSON][JSON]][JSON-url]
 
 <!-- Links to the technologies -->
 [Firebase]: https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black
@@ -51,8 +50,6 @@ SoulSupport is a web application designed to empower teenagers facing mental hea
 [CSS-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[JSON]: https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white
-[JSON-url]: https://www.json.org/
 
 ## Usage
 1. **Main Page**: Visit `soulsupport.html` to explore the features of SoulSupport, including the AI chatbot, support groups, and articles.
@@ -61,7 +58,7 @@ SoulSupport is a web application designed to empower teenagers facing mental hea
 4. **Articles**: Read articles on various mental health topics to gain insights and strategies for improving well-being.
 
 ## Screenshots
-![SoulSupport Main Page](https://ibb.co/q1hpV88)
+![SoulSupport Main Page](https://i.ibb.co/q1hpV88/Screenshot-27.png)
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
