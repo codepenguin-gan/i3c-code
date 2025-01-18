@@ -88,7 +88,8 @@ main {
 /* Questions Container */
 .questions-container {
     position: relative;
-    min-height: 330px; /* Allow container to expand based on content */
+    height: 200px;
+    min-height: 200px; /*330px to 200px */
     overflow: hidden; /* Hide overflow during transitions */
     
     
@@ -120,7 +121,7 @@ main {
     opacity: 0;
     transform: translateX(100%);
     box-sizing: border-box; /* Ensure padding is included in width */
-    min-height: 330px; /* Allow height to expand based on content */
+    /* min-height: 330px;  */
 }
 
 
@@ -205,6 +206,27 @@ input[type="radio"] {
     font-size: 0.8em;
     color: #2980b9;
     background-color: transparent;
+}
+
+/* Style for checkboxes */
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Style for checkbox labels */
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #2c3e50;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d6e4f0;
+    transition: background-color 0.3s ease;
+}
+
+label:hover {
+    background-color: #c0d4e8; /* Slightly darker blue on hover */
 }
 
 /* Button Styling */

@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const questions = document.querySelectorAll('.question');
-    const previousButton = document.getElementById('previousButton');
-    const nextButton = document.getElementById('nextButton');
-    const submitButton = document.getElementById('submitButton');
-    const container = document.querySelector('.questions-container')
-    let currentQuestion = 0;
+    const questions = document.querySelectorAll('.question'); // All question divs
+    const previousButton = document.getElementById('previousButton'); // Previous button
+    const nextButton = document.getElementById('nextButton'); // Next button
+    const submitButton = document.getElementById('submitButton'); // Submit button
+    const container = document.querySelector('.questions-container'); // Container for questions
+    let currentQuestion = 0; // Track the current question index
 
-    function showQuestion(index, direction) {
+    // Function to show the current question and hide others
+    function showQuestion(index) {
         // Hide all questions
         questions.forEach((question) => {
             question.classList.remove('active', 'previous');
@@ -16,45 +17,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Show the current question
         const currentQuestionElement = questions[index];
-        
+        currentQuestionElement.classList.add('active');
         currentQuestionElement.style.opacity = '1';
         currentQuestionElement.style.transform = 'translateX(0)';
-        currentQuestionElement.classList.add('active');
+
+        // Adjust the container height to fit the active question's content
+        container.style.minHeight = `${currentQuestionElement.scrollHeight + 10}px`;
 
         // Update button visibility
-        // if (currentQuestion < 2){
-        //   container.style.minHeight = "330px";
-        // } else if (currentQuestion == 2){
-        //   container.style.minHeight = "330px"
-        // } 
-        
-        previousButton.style.display = index === 0 ? 'none' : 'block';
-        nextButton.style.display = index === questions.length - 1 ? 'none' : 'block';
-        submitButton.style.display = index === questions.length - 1 ? 'block' : 'none';
+        previousButton.style.display = index === 0 ? 'none' : 'block'; // Hide "Previous" on the first question
+        nextButton.style.display = index === questions.length - 1 ? 'none' : 'block'; // Hide "Next" on the last question
+        submitButton.style.display = index === questions.length - 1 ? 'block' : 'none'; // Show "Submit" on the last question
     }
-    
 
+    // Event listener for the "Next" button
     nextButton.addEventListener('click', function () {
-        console.log('Next button clicked');
         if (currentQuestion < questions.length - 1) {
-            currentQuestion++;
-            showQuestion(currentQuestion, 'next');
+            currentQuestion++; // Move to the next question
+            showQuestion(currentQuestion); // Update the UI
         }
     });
 
+    // Event listener for the "Previous" button
     previousButton.addEventListener('click', function () {
         if (currentQuestion > 0) {
-            currentQuestion--;
-            showQuestion(currentQuestion, 'previous');
+            currentQuestion--; // Move to the previous question
+            showQuestion(currentQuestion); // Update the UI
         }
     });
 
-    // Handle form submission
+    // Event listener for form submission
     document.getElementById('consultationForm').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent form submission
-        alert('Form submitted successfully!'); // Replace with your submission logic
+    
+        // Get selected checkboxes for "type"
+        const typeCheckboxes = document.querySelectorAll('input[name="type"]:checked');
+        const selectedTypes = Array.from(typeCheckboxes).map(checkbox => checkbox.value);
+    
+        // Get selected checkboxes for "overwhelmed"
+        const overwhelmedCheckboxes = document.querySelectorAll('input[name="overwhelmed"]:checked');
+        const selectedOverwhelmed = Array.from(overwhelmedCheckboxes).map(checkbox => checkbox.value);
+    
+        // Log selected values (replace with your logic)
+        console.log('Selected types:', selectedTypes);
+        console.log('Selected overwhelmed frequencies:', selectedOverwhelmed);
+    
+        alert('Form submitted successfully!');
     });
-
-    // Show the first question initially
-    showQuestion(currentQuestion, 'next');
+    showQuestion(currentQuestion);
 });

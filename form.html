@@ -26,31 +26,57 @@
             <form id="consultationForm" novalidate>
                 <div class="questions-container">
                     <div id="question1" class="question active">
-                        <p>1. What is your primary reason for seeking therapy?</p>
-                        <label><input type="radio" name="reason" value="stress"> Stress</label>
-                        <label><input type="radio" name="reason" value="anxiety"> Anxiety</label>
-                        <label><input type="radio" name="reason" value="depression"> Depression</label>
-                        <label><input type="radio" name="reason" value="other"> Other</label>
+                        <p>What type of therapy are you looking for?</p>
+                        <label><input type="radio" name="type" value="individual"> Individual (for yourself)</label>
+                        <label><input type="radio" name="type" value="couples"> Couples (for myself and my partner)</label>
+                        <label><input type="radio" name="type" value="friends"> Friends (for myself and my friends)</label>
+                        <label><input type="radio" name="type" value="teen"> Teen (for my child)</label>
+                        <label><input type="radio" name="type" value="other"> Other</label>
                     </div>
                     <div id="question2" class="question">
-                        <p>2. How often do you feel overwhelmed?</p>
-                        <label><input type="radio" name="overwhelmed" value="daily"> Daily</label>
-                        <label><input type="radio" name="overwhelmed" value="weekly"> Weekly</label>
-                        <label><input type="radio" name="overwhelmed" value="monthly"> Monthly</label>
-                        <label><input type="radio" name="overwhelmed" value="rarely"> Rarely</label>
+                        <p>What is your gender?</p>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
                     </div>
+
                     <div id="question3" class="question">
-                        <p>3. Which country are you in?</p>
-                        <select name="country" required>
-                            <option value="">Select your country</option>
-                            <option value="USA">United States</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="Canada">Canada</option>
-                            <!-- Add more countries as needed -->
+                        <!-- need to add a scroller effect for this -->
+                        <p>How old are you?</p>
+                        <select name="age" required>
+                            <option value="">Select your age</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
                         </select>
                     </div>
                     
-                    
+                    <div id="question4" class="question">
+                        <p>Have you ever been in therapy before?</p>
+                        <label><input type="radio" name="type" value="yes"> Yes</label>
+                        <label><input type="radio" name="type" value="no"> No</label>
+                            
+                        </select>
+                    </div>
+                    <div id="question5" class="question">
+                        <p>What led you to consider therapy?</p>
+                        
+                        <div class="input-wrapper">
+                            <input type="email" name="email" id="email" placeholder=" " required>
+                            <label for="email">Enter your email</label>
+                        </div>
+                    </div>     
+                    <div id="question6" class ="question">
+                        
+                    </div>
+                
                     <div id="question4" class="question">
                         <p>4. Please provide your email address.</p>
                         
@@ -58,7 +84,7 @@
                             <input type="email" name="email" id="email" placeholder=" " required>
                             <label for="email">Enter your email</label>
                         </div>
-                    </div>             
+                    </div>  
                 </div>
                 
                 <div class="button-group">
