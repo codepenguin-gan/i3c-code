@@ -1,4 +1,4 @@
-document.getElementById('toggleButton').addEventListener('click', function() {
+document.getElementById('toggleButton').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('collapsed');
 });
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const closeBtn = document.querySelector(".close-btn");
-  const emergencyCard = document.querySelector(".emergency-contact");
+    const closeBtn = document.querySelector(".close-btn");
+    const emergencyCard = document.querySelector(".emergency-contact");
 
-  closeBtn.addEventListener("click", () => {
-    emergencyCard.style.display = "none";
-  });
+    closeBtn.addEventListener("click", () => {
+        emergencyCard.style.display = "none";
+    });
 });
