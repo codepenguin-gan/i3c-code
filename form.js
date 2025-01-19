@@ -50,19 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event listener for form submission
     document.getElementById('consultationForm').addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent form submission
-    
+
         // Get selected checkboxes for "type"
         const typeCheckboxes = document.querySelectorAll('input[name="type"]:checked');
         const selectedTypes = Array.from(typeCheckboxes).map(checkbox => checkbox.value);
-    
+
         // Get selected checkboxes for "overwhelmed"
         const overwhelmedCheckboxes = document.querySelectorAll('input[name="overwhelmed"]:checked');
         const selectedOverwhelmed = Array.from(overwhelmedCheckboxes).map(checkbox => checkbox.value);
-    
+
         // Log selected values (replace with your logic)
         console.log('Selected types:', selectedTypes);
         console.log('Selected overwhelmed frequencies:', selectedOverwhelmed);
-    
+
         alert('Form submitted successfully!');
     });
     showQuestion(currentQuestion);
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Emergency Contact Card Logic
     const suicidePlansRadios = document.querySelectorAll('input[name="suicide_plans"]');
     const emergencyCardTemplate = document.getElementById('emergencyCardTemplate');
-    
+
     suicidePlansRadios.forEach(radio => {
         radio.addEventListener('change', function () {
             if (this.value === 'Yes') {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const emergencyCard = emergencyCardTemplate.cloneNode(true);
                 emergencyCard.style.display = 'block'; // Make it visible
                 document.body.appendChild(emergencyCard);
-    
+
                 // Add event listener for the close button
                 const closeBtn = emergencyCard.querySelector('.emergency-close-btn');
                 closeBtn.addEventListener('click', () => {

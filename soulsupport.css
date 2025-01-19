@@ -1,4 +1,4 @@
-*{
+* {
     cursor: default;
     margin: 0;
     box-sizing: content-box;
@@ -20,10 +20,12 @@ body {
     color: white;
     transition: width 0.3s;
     overflow: hidden;
-    position: fixed; /* Fixed position to keep it visible */
+    position: fixed;
+    /* Fixed position to keep it visible */
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
+    /* Ensure it's above other content */
 }
 
 .sidebar.collapsed {
@@ -31,8 +33,9 @@ body {
 }
 
 /* When sidebar is collapsed, adjust main content margin */
-.sidebar.collapsed + .main-content {
-    margin-left: 50px; /* Match the width of the collapsed sidebar */
+.sidebar.collapsed+.main-content {
+    margin-left: 50px;
+    /* Match the width of the collapsed sidebar */
 }
 
 .sidebar-header {
@@ -69,22 +72,26 @@ body {
 
 /* Hover state: Change background and text color */
 .sidebar-nav ul li:hover {
-    background-color: #444; /* Hover background color */
+    background-color: #444;
+    /* Hover background color */
     cursor: pointer;
 }
 
 .sidebar-nav ul li:hover a {
-    color: #ffcc00; /* Hover text color */
+    color: #ffcc00;
+    /* Hover text color */
     cursor: pointer;
 }
 
 /* Active (clicked) state: Change background and text color */
 .sidebar-nav ul li.active {
-    background-color: #666; /* Active background color */
+    background-color: #666;
+    /* Active background color */
 }
 
 .sidebar-nav ul li.active a {
-    color: #00ffcc; /* Active text color */
+    color: #00ffcc;
+    /* Active text color */
 }
 
 .sidebar-nav ul li a {
@@ -117,9 +124,12 @@ body {
     flex-grow: 1;
     padding: 0px;
     background-color: #f4f4f4;
-    margin-left: 250px; /* Match the width of the expanded sidebar */
-    transition: margin-left 0.3s; /* Smooth transition */
+    margin-left: 250px;
+    /* Match the width of the expanded sidebar */
+    transition: margin-left 0.3s;
+    /* Smooth transition */
 }
+
 button {
     background: none;
     border: none;
@@ -214,15 +224,15 @@ header p {
 }
 
 .ai-companion {
-  background-image: url("https://i.postimg.cc/50VKpTV1/bg2.png");
-  background-size: cover;
-  min-height: 100vh;
+    background-image: url("https://i.postimg.cc/50VKpTV1/bg2.png");
+    background-size: cover;
+    min-height: 100vh;
 }
 
 .ai-companion h2 {
-  color: #ffffff;
-  font-family: "Garamond";
-  font-size: 35px;
+    color: #ffffff;
+    font-family: "Garamond";
+    font-size: 35px;
 }
 
 .ai-companion p, .articles p, .support-groups p, .why-choose-us p, .contact-info p {
@@ -250,7 +260,7 @@ header p {
     font-size: 16px;
     margin-left: 0px;
     margin-right: 0px;
-    color: #1c1c1c;  
+    color: #1c1c1c;
 }
 
 .ai-features {
@@ -277,9 +287,9 @@ header p {
 }
 
 .feature:hover {
-  background-color: #f0f0f0;
-  max-width: 270px;
-  cursor: pointer;
+    background-color: #f0f0f0;
+    max-width: 270px;
+    cursor: pointer;
 }
 
 .feature img {
@@ -291,21 +301,21 @@ header p {
 }
 
 .articles {
-  background-image: url("https://i.postimg.cc/YCTsLjDv/bg3.png");
-  background-size: cover;
-  margin-top: -7px;
-  height: 100vh;
+    background-image: url("https://i.postimg.cc/YCTsLjDv/bg3.png");
+    background-size: cover;
+    margin-top: -7px;
+    height: 100vh;
 }
 
 .articles h2 {
-  font-family: "Inter";
-  font-size: 50px;
-  color: #bdf347;
+    font-family: "Inter";
+    font-size: 50px;
+    color: #bdf347;
 }
 
 .articles h3:hover {
-  color: #a6d542;
-  cursor: pointer;
+    color: #a6d542;
+    cursor: pointer;
 }
 
 .article-list {
@@ -358,7 +368,7 @@ header p {
     color: #ffffff;
     font-family: "Inter";
     font-size: 16px;
-    
+
 }
 
 .group {
@@ -413,7 +423,7 @@ header p {
 
 .group-list {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
     min-height: 70vh;
