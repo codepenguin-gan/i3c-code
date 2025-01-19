@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
         container.style.minHeight = `${currentQuestionElement.scrollHeight + 10}px`;
 
         // Update button visibility
-        previousButton.style.display = index === 0 ? 'none' : 'block'; // Hide "Previous" on the first question
+        // Update button visibility
+        previousButton.style.visibility = index === 0 ? 'hidden' : 'visible'; // Hide "Previous" on the first question
         nextButton.style.display = index === questions.length - 1 ? 'none' : 'block'; // Hide "Next" on the last question
-        submitButton.style.display = index === questions.length - 1 ? 'block' : 'none'; // Show "Submit" on the last question
+        submitButton.style.display = index === questions.length - 1 ? 'block' : 'none'; // Show "Submit" on the last question.style.display = index === questions.length - 1 ? 'block' : 'none'; // Show "Submit" on the last question
     }
 
     // Event listener for the "Next" button
@@ -65,4 +66,25 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Form submitted successfully!');
     });
     showQuestion(currentQuestion);
+
+    // Emergency Contact Card Logic
+    const suicidePlansRadios = document.querySelectorAll('input[name="suicide_plans"]');
+    const emergencyCardTemplate = document.getElementById('emergencyCardTemplate');
+    
+    suicidePlansRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            if (this.value === 'Yes') {
+                // Clone the emergency card template and append it to the body
+                const emergencyCard = emergencyCardTemplate.cloneNode(true);
+                emergencyCard.style.display = 'block'; // Make it visible
+                document.body.appendChild(emergencyCard);
+    
+                // Add event listener for the close button
+                const closeBtn = emergencyCard.querySelector('.emergency-close-btn');
+                closeBtn.addEventListener('click', () => {
+                    emergencyCard.remove(); // Remove the card when closed
+                });
+            }
+        });
+    });
 });

@@ -232,8 +232,16 @@ label:hover {
 /* Button Styling */
 .button-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out buttons */
     margin-top: 20px;
+}
+
+#previousButton {
+    visibility: hidden; /* Hide but keep space for the button */
+}
+
+#previousButton:not([style*="display: none"]) {
+    visibility: visible; /* Show when not hidden */
 }
 
 button {
@@ -265,3 +273,60 @@ footer {
     margin-top: 30px;
     font-size: 0.9em;
 }
+
+.emergency-contact {
+    position: fixed;
+    bottom: 1rem; /* Equivalent to bottom-4 in Tailwind */
+    right: 1rem; /* Equivalent to right-4 in Tailwind */
+    z-index: 50; /* Equivalent to z-50 in Tailwind */
+  }
+  
+  .emergency-card {
+    background-color: #fef2f2; /* Equivalent to bg-red-50 in Tailwind */
+    border: 1px solid #fecaca; /* Equivalent to border-red-200 in Tailwind */
+    border-radius: 0.5rem; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Optional: Add shadow */
+  }
+  
+  .emergency-card-content {
+    padding: 1rem; /* Equivalent to p-4 in Tailwind */
+  }
+  
+  .emergency-card h3 {
+    font-weight: bold; /* Equivalent to font-bold in Tailwind */
+    color: #991b1b; /* Equivalent to text-red-800 in Tailwind */
+    margin-bottom: 0.5rem; /* Equivalent to mb-2 in Tailwind */
+  }
+  
+  .emergency-card p {
+    color: #b91c1c; /* Equivalent to text-red-700 in Tailwind */
+  }
+  
+  .emergency-card a {
+    color: #991b1b; /* Equivalent to text-red-800 in Tailwind */
+    font-weight: bold; /* Equivalent to font-bold in Tailwind */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .emergency-card a:hover {
+    
+    text-decoration: underline; /* Equivalent to hover:underline in Tailwind */
+  }
+  
+  .emergency-close-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #991b1b;
+    transition: color 0.3s ease; 
+  }
+  
+  .emergency-close-btn:hover {
+    background-color: transparent; /* Ensure no background color on hover */
+    transform: none;
+    color: #7f1d1d;
+  }
