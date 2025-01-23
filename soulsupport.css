@@ -233,7 +233,7 @@ header p {
 }
 
 .ai-companion h2 {
-    color: #ffffff;
+    color: #555;
     font-family: "Garamond";
     font-size: 35px;
 }
@@ -314,7 +314,7 @@ header p {
 .articles h2 {
     font-family: "Inter";
     font-size: 50px;
-    color: #bdf347;
+    color: #555;
 }
 
 .articles h3:hover {
@@ -363,7 +363,7 @@ header p {
 }
 
 .support-groups h2 {
-    color: #ffffff;
+    color: #555;
     font-family: "Garamond";
     font-size: 50px;
     margin-bottom: 10px;
