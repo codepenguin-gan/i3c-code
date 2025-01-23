@@ -125,7 +125,7 @@ body {
 .main-content {
     flex-grow: 1;
     padding: 0px;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     margin-left: 250px;
     /* Match the width of the expanded sidebar */
     transition: margin-left 0.3s;
@@ -226,7 +226,7 @@ header p {
 }
 
 .ai-companion {
-    background-image: url("https://i.postimg.cc/50VKpTV1/bg2.png");
+    background-image: var(--right);
     background-size: cover;
     min-height: 100vh;
 }
@@ -303,7 +303,7 @@ header p {
 }
 
 .articles {
-    background-image: url("https://i.postimg.cc/YCTsLjDv/bg3.png");
+    background-image: var(--left);
     background-size: cover;
     margin-top: -7px;
     height: 100vh;
@@ -433,24 +433,6 @@ header p {
     margin-bottom: 20px;
 }
 
-.why-choose-us {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.why-choose-us h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.content-wrapper {
-    display: flex;
-    align-items: center;
-}
-
 .why-choose-us img {
     width: 500px;
     height: auto;
@@ -462,10 +444,12 @@ header p {
     font-size: 1.1em;
     line-height: 1.6;
     text-align: left;
+    margin-left: 20px; /* Adjust as needed */
 }
 
-.whychooseus-container {
-    display: block;
+.content-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -475,13 +459,14 @@ header p {
     }
 
     .why-choose-us img {
-        width: 50%;
-        max-width: none;
+        width: 100%;
+        max-width: 612px; /* Match the new image width */
         margin-bottom: 15px;
     }
 
     .why-choose-us p {
         text-align: center;
+        margin-left: 0;
     }
 }
 

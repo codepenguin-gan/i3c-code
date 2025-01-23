@@ -1,0 +1,6 @@
+:root {
+    --bottom : url(./background/light-pink-bottom.svg);
+    --top : url(./background/light-pink-top.svg);
+    --right : url(./background/pink-right.svg);
+    --left : url(./background/pink-left.svg)
+}
