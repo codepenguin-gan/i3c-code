@@ -213,12 +213,12 @@ header p {
 .contact-info h2,
 .contact-info img,
 .contact-info .contact-details p{
-    animation: fade-up linear;
+    animation: fade-up 1s ease-out;
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
 }
 .map-container {
-    animation: fade-up linear;
+    animation: fade-up 1s ease-out;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
 }
@@ -620,8 +620,8 @@ hr {
 @keyframes fade-up {
     0% {
         opacity: 0;
-        transform: translateY(130px);
-        scale: 0.5;
+        transform: translateY(100px);
+        scale: 0.7;
     }
 
     100% {
@@ -634,8 +634,8 @@ hr {
 @keyframes fade-down {
     0% {
         opacity: 0;
-        transform: translateY(-130px);
-        scale: 0.5;
+        transform: translateY(-100px);
+        scale: 0.7;
     }
 
     100% {
@@ -644,3 +644,4 @@ hr {
         scale: 1;
     }
 }
+
